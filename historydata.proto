@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_outer_classname = "HistoryTrainService";
+package nightTempHistory;
+option java_multiple_files = true;
+option java_package = "com.rain.dm.dw.service.grpc";
+
+service HistoryDataService {
+    rpc getHistoryData (HistoryDataRequest) returns (HistoryDataResponse) {}
+}
+
+message HistoryDataRequest {
+    string deviceNum = 1;
+    int64 dateBegin = 2;
+    int64 dateEnd = 3;
+    string cityCode = 4;
+}
+
+message HistoryDataResponse {
+    repeated string historyData = 1;
+}
