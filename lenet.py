@@ -29,5 +29,5 @@ class LeNet(nn.Module):
 
 # 创建LeNet实例
 model = LeNet()
-# 打印网络结构
+# 打印网络结构.
 print(model)
